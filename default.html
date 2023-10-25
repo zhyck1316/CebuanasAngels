@@ -19,6 +19,9 @@
     <script src="./public/vendors/simplebar/simplebar.min.js"></script>
     <script src="./public/assets/js/config.js"></script>
     
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -493,13 +496,7 @@
           </div>
           <div class="row">
             <div class="col-12 mb-10">
-              <div class="mapouter">
-                <div class="gmap_canvas">
-                  <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=800&amp;height=450&amp;hl=en&amp;q=morning glory mingla&amp;t=p&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-                  <a href="https://connectionsgame.org/">Connections Unlimited</a>
-                </div>
-                <style>.mapouter{position:relative;text-align:right;width:100%;height:450px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:450px;}.gmap_iframe {height:450px!important;}</style>
-              </div>
+              <div id="map" style="width: 100%; height: 450px;"></div>
             </div>
           </div>
           <div class="row g-5 g-lg-5" id="contact">
@@ -701,21 +698,15 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiVBHLjoJe2WIUZkwGlGY1GPf5aim17Jg&callback=initMap" async></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <div id="map" style="width: 100%; height: 450px;"></div>
-    <!-- <script>
-        function initMap() {
-            var map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: 10.244149, lng: 123.795020 },
-                zoom: 16
-            });
-
-            var marker = new google.maps.Marker({
-                position: { lat: 10.244149, lng: 123.795020 },
-                map: map,
-                title: 'Location of Our office'
-            });10.244149
-        }
-    </script> -->
-
+    
+    <script>
+      var map = L.map('map').setView([10.244149, 123.795020], 30);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+      L.marker([10.244149, 123.795020]).addTo(map)
+          .bindPopup('Exact location of our Ward II Office').openPopup();
+    </script>
+  
+    
   </body>
 
 </html>
