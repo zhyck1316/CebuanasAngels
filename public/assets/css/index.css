@@ -57,7 +57,7 @@ img:hover{
 .slider::after{
     left:0;
     top: 0;
-    transform: rotateZ(180deg);
+    transform: rotateZ(180deg); 
 }
 
 .horizontalBorder{

@@ -445,8 +445,8 @@
               <h4 class="text-primary fw-bolder mb-3">Gallery</h4>
               <h2>Some of Our Best Works</h2>
             </div>
-            <div class="col-lg-6">
-              <p>Rise like Phoenix focusing only on functionalities for your digital products leaving the design for us. Show what you do, with our latest admin dashboard. Check our best works and let us know what you want to find.</p>
+            <div class="col-lg-12">
+              <p>Here in Cebuanas Encoding Services, we value our employees as much as we value everyone. Their well-being is our concern, here are some of the captured activities we do for our employees to ensure proper Work-Life balance inside our company.</p>
             </div>  
           </div>
           <ul class="nav font-sans-serif mb-6 justify-content-center justify-content-sm-start w-max-content" data-filter-nav="data-filter-nav">
@@ -493,11 +493,12 @@
           </div>
           <div class="row">
             <div class="col-12 mb-10">
-              <div class="googlemap" data-googlemap="data-googlemap" data-gmap="data-gmap" data-latlng="10.244184, 123.795051" data-scrollwheel="false" data-zoom="15" style="height: 381px; border-radius:1.5rem;">
-                <div class="marker-content py-3">
-                  <h5>Google map</h5>
-                  <p>A nice template for your site.<br />Customize it as you want.</p>
+              <div class="mapouter">
+                <div class="gmap_canvas">
+                  <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=800&amp;height=450&amp;hl=en&amp;q=morning glory mingla&amp;t=p&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                  <a href="https://connectionsgame.org/">Connections Unlimited</a>
                 </div>
+                <style>.mapouter{position:relative;text-align:right;width:100%;height:450px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:450px;}.gmap_iframe {height:450px!important;}</style>
               </div>
             </div>
           </div>
@@ -697,9 +698,24 @@
     <script src="./public/vendors/isotope-packery/packery-mode.pkgd.min.js"></script>
     <script src="./public/vendors/bigpicture/BigPicture.js"></script>
     <script src="./public/vendors/countup/countUp.umd.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbaQGvhe7Af-uOMJz68NWHnO34UjjE7Lo&callback=initMap" async></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiVBHLjoJe2WIUZkwGlGY1GPf5aim17Jg&callback=initMap" async></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    
+    <div id="map" style="width: 100%; height: 450px;"></div>
+    <!-- <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 10.244149, lng: 123.795020 },
+                zoom: 16
+            });
+
+            var marker = new google.maps.Marker({
+                position: { lat: 10.244149, lng: 123.795020 },
+                map: map,
+                title: 'Location of Our office'
+            });10.244149
+        }
+    </script> -->
+
   </body>
 
 </html>
