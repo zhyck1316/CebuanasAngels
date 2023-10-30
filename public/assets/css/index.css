@@ -12,6 +12,9 @@
     animation: scroll 25s linear infinite;
 }
 
+.rdmore .moretext{
+display: none;
+}
 
 @keyframes scroll{
     from{
@@ -67,3 +70,7 @@ img:hover{
 }
 /* ! END OF SLIDE CSS */
 
+.list-unstyled .btn{
+    --phoenix-btn-padding-x: 0;
+    --phoenix-btn-padding-y: 0;
+}
